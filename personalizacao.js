@@ -28,7 +28,7 @@
 
     var myAppJavaScript = function ($) {
 
-        var html_nome_numero = "<div style='display:none;' class='div_propertie_camisa'> <div class='form-group'> <label class='form-label'>Nome na camisa</label> <input type='text' name='properties[Nome na camisa]' class='form-control'> </div><div class='form-group'> <label class='form-label'>Número na camisa</label> <input type='number' name='properties[Número na camisa]' class='form-control'> </div></div>";
+        var html_nome_numero = "<div style='display:none;' class='div_propertie_camisa'> <div class='form-group'> <label class='form-label'>Nome na camisa</label> <input type='text' id='nome-camisa' name='properties[Nome na camisa]' class='form-control'> </div><div class='form-group'> <label class='form-label'>Número na camisa</label> <input type='number' name='properties[Número na camisa]' class='form-control'> </div></div>";
 
         //$(html_nome_numero).insertAfter("#product_form > .js-product-variants");
         //$(html_nome_numero).insertAfter('form.js-product-form > .js-product-variants');
@@ -69,11 +69,13 @@
 
                     if (possiveis_valores_string.indexOf(select.val()) != -1) {
                         div_customizada.show();
+                        form.find('#nome-camisa').focus();
                     }
-
+                    
                     select.change(function () {
                         if (possiveis_valores_string.indexOf(select.val()) != -1) {
                             div_customizada.show();
+                            form.find('#nome-camisa').focus();
                         } else {
                             div_customizada.hide();
                         }
