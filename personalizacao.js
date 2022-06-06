@@ -38,16 +38,7 @@
             $(this).after(html_nome_numero);
         });
 
-        $(".item-buy-variants form.js-product-form").each(function (index) {
-            var elemento_atual = $(this);
-            var elemento_imagem = elemento_atual.parents('.item-image');
-            var altura_imagem = elemento_imagem.height();
-            console.log('altura imagemm!');
-            elemento_atual.css('overflow-x', 'hidden');
-            elemento_atual.css('width', 'auto');
-            elemento_atual.css('height', altura_imagem + 'px');
-            elemento_atual.css('overflow-y', 'scroll');
-        });
+        
         //var form_pagina_inicial = $(".item-buy-variants form.js-product-form");
 
         //console.log("Item buy: " + item_buy);
@@ -71,10 +62,22 @@
                         div_customizada.show();
                         form.find('.nome-camisa').focus();
                     }
-                    
+
                     select.change(function () {
                         if (possiveis_valores_string.indexOf(select.val()) != -1) {
+                            $(".item-buy-variants form.js-product-form").each(function (index) {
+                                var elemento_atual = $(this);
+                                var elemento_imagem = elemento_atual.parents('.item-image');
+                                var altura_imagem = elemento_imagem.height();
+                                //console.log('altura imagemm!');
+                                elemento_atual.css('overflow-x', 'hidden');
+                                elemento_atual.css('width', 'auto');
+                                elemento_atual.css('height', (altura_imagem - 50) + 'px');
+                                elemento_atual.css('overflow-y', 'scroll');
+                            });
+                            
                             div_customizada.show();
+
                             form.find('.nome-camisa').focus();
                         } else {
                             div_customizada.hide();
