@@ -38,12 +38,12 @@
             $(this).after(html_nome_numero);
         });
 
-        
+
         //var form_pagina_inicial = $(".item-buy-variants form.js-product-form");
 
         //console.log("Item buy: " + item_buy);
 
-        var possiveis_valores = ['Com Personalização', 'COM PERSONALIZAÇÃO', 'Sim', 'SIM', 'Com modificação'];
+        var possiveis_valores = ['Com Personalização', 'COM PERSONALIZAÇÃO', 'com personalização', 'Sim', 'SIM', 'sim', 'com modificação', 'COM MODIFICAÇÃO',  'Com modificação'];
 
         for (var i = 0; i < possiveis_valores.length; i++) {
             var query = 'select option:contains("' + possiveis_valores[i] + '")';
@@ -75,7 +75,7 @@
                                 elemento_atual.css('height', (altura_imagem - 50) + 'px');
                                 elemento_atual.css('overflow-y', 'scroll');
                             });
-                            
+
                             div_customizada.show();
 
                             form.find('.nome-camisa').focus();
