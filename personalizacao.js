@@ -43,7 +43,7 @@
 
         //console.log("Item buy: " + item_buy);
 
-        var possiveis_valores = ['Com Personalização', 'COM PERSONALIZAÇÃO', 'com personalização', 'Sim', 'SIM', 'sim', 'com modificação', 'COM MODIFICAÇÃO', 'Com modificação', 'Quero meu nome'];
+        var possiveis_valores = ['Com Personalização', 'COM PERSONALIZAÇÃO', 'Com personalização', 'Com personalização (Nome + Número)', 'com personalização', 'Sim', 'SIM', 'sim', 'com modificação', 'COM MODIFICAÇÃO', 'Com modificação', 'Quero meu nome'];
 
         for (var i = 0; i < possiveis_valores.length; i++) {
             var query = 'select option:contains("' + possiveis_valores[i] + '")';
